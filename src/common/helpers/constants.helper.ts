@@ -23,6 +23,8 @@ export const SMTP_USER = GET('SMTP_USER');
 export const SMTP_PASS = GET('SMTP_PASS');
 
 export const EMAIL_FROM = GET('EMAIL_FROM');
+export const GOOGLE_OAUTH_CLIENT_ID = GET('GOOGLE_OAUTH_CLIENT_ID');
+export const GOOGLE_OAUTH_CLIENT_SECRET = GET('GOOGLE_OAUTH_CLIENT_SECRET');
 
 let AUTH_DB = '';
 if (DB_USER) {
