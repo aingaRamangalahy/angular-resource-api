@@ -9,12 +9,13 @@ import {
 } from '@nestjs/common';
 import { CreateResourceDto } from './dto/create-resource.dto';
 import { Resource } from './interfaces/resource.interface';
+import { ResourceService } from './resource.service';
 
 @Controller('resource')
 export class ResourceController {
-  constructor(private readonly resourceService) {}
+  constructor(private readonly resourceService: ResourceService) {}
 
-  @Get('/')
+  @Get()
   async findAll(): Promise<Resource[]> {
     return await this.resourceService.findAll();
   }
